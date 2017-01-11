@@ -1,0 +1,78 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/page-header/page-header.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.page-header {
+    display: flex;
+    color: @text-color;
+    flex-wrap: wrap;
+
+
+    &__inner{
+        .container();
+    }
+    
+    &__contacts{
+        @media(max-width: @screen-md){
+            display: none;
+        }
+    }
+    .btn{
+        @media(max-width: @screen-md){
+            display: none;
+        }
+    }
+}
+.main-logo{
+    display: flex;
+    flex-basis: 75%;
+    flex-grow: 3;
+    text-align: center;
+    justify-content: center;
+}
+.main-nav{
+
+    display: flex;
+    flex-wrap: nowrap;
+
+    &__item{
+        font-family: @main-font;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: @text-small;
+        line-height: 50px;
+
+        display: flex;
+        flex-direction: column;
+
+        list-style: none;
+
+        text-align: center;
+    }
+    &__link{
+        &--active{
+            color: @brand-color;
+        }
+    }
+    &__nav{
+            display: none;
+    }
+    &__toggler{
+        
+        &-img{
+            padding: 10px;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            flex-basis: 25%;
+            flex-grow: 1;
+            }
+
+        @media(min-width: @screen-lg){
+            display: none;
+        }
+
+    }
+}
