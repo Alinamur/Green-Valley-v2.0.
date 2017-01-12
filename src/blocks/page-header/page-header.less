@@ -17,6 +17,11 @@
         @media(max-width: @screen-md){
             display: none;
         }
+
+        @media(min-width: @screen-lg){
+            display: flex;
+            flex-basis: 25%;
+        }
     }
     .btn{
         @media(max-width: @screen-md){
@@ -32,7 +37,8 @@
     justify-content: center;
 
     @media(min-width: @screen-lg){
-            flex-basis: 16%;
+            flex-basis: 17%;
+            height: 60px;
         }
 
 }
@@ -40,6 +46,11 @@
 
     display: flex;
     flex-wrap: nowrap;
+
+    @media(min-width: @screen-lg){
+            flex-basis: 34%;
+            line-height: 72px;
+        }
 
     &__item{
         font-family: @main-font;
@@ -52,22 +63,43 @@
         list-style: none;
 
         text-align: center;
+
+        @media(min-width: @screen-lg){
+            padding: 0 10px;
+        }
+
     }
     
     &__list{
         display: flex;
         flex-direction: column;
         flex-basis: 100%;
+
+        @media(min-width: @screen-lg){
+            flex-direction: row;
+        }
     }
 
     &__link{
         &--active{
             color: @brand-color;
         }
+
+        @media(min-width: @screen-lg){
+            color: @darkest;
+            text-decoration: none;
+            font-size: @text-small;
+            font-family: @text-font;
+        }
     }
     &__nav{
             display: none;
             order: 2;
+
+        @media(min-width: @screen-lg){
+            display: flex;
+            flex-direction: row;
+        }
     }
     &__toggler{
         
@@ -88,3 +120,12 @@
 
     }
 }
+
+.menu--open{
+    display: flex;
+}
+
+.btn{
+    display: flex;
+    flex-basis: 24%;
+} 
