@@ -30,6 +30,11 @@
     flex-grow: 3;
     text-align: center;
     justify-content: center;
+
+    @media(min-width: @screen-lg){
+            flex-basis: 16%;
+        }
+
 }
 .main-nav{
 
@@ -43,13 +48,18 @@
         font-size: @text-small;
         line-height: 50px;
 
-        display: flex;
-        flex-direction: column;
 
         list-style: none;
 
         text-align: center;
     }
+    
+    &__list{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+    }
+
     &__link{
         &--active{
             color: @brand-color;
@@ -57,17 +67,19 @@
     }
     &__nav{
             display: none;
+            order: 2;
     }
     &__toggler{
         
+            flex-basis: 25%;
         &-img{
             padding: 10px;
             cursor: pointer;
             width: 30px;
             height: 30px;
             display: flex;
-            flex-basis: 25%;
             flex-grow: 1;
+            order: 1;
             }
 
         @media(min-width: @screen-lg){
