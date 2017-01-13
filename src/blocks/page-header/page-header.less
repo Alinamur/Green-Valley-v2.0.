@@ -14,19 +14,36 @@
     }
     
     &__contacts{
-        @media(max-width: @screen-md){
+        @media(max-width: @screen-lg){
             display: none;
         }
 
         @media(min-width: @screen-lg){
             display: flex;
-            flex-basis: 25%;
+            flex-basis: 33%;
+            flex-direction: column;
         }
     }
     .btn{
-        @media(max-width: @screen-md){
+        @media(max-width: @screen-lg){
             display: none;
         }
+    }
+
+    &__phone-link{
+        color: @text-color;
+        font-size: @accent;
+        font-family: @main-font;
+        text-decoration: none;
+        font-weight: bold;
+        padding-top: 25px;
+    }
+
+    &__address{
+        font-family: @text-font;
+        font-size: @text-small;
+        padding-top: 10px;
+        color: @text-color;
     }
 }
 .main-logo{
@@ -37,8 +54,9 @@
     justify-content: center;
 
     @media(min-width: @screen-lg){
-            flex-basis: 17%;
-            height: 60px;
+            flex-basis: 10%;
+            padding: 15px 0;
+            flex-grow: 1;
         }
 
 }
@@ -50,6 +68,7 @@
     @media(min-width: @screen-lg){
             flex-basis: 34%;
             line-height: 72px;
+            padding-right: 100px;
         }
 
     &__item{
@@ -90,6 +109,11 @@
             text-decoration: none;
             font-size: @text-small;
             font-family: @text-font;
+            font-weight: 600;
+
+            &--active{
+                text-decoration: none;
+            }
         }
     }
     &__nav{
