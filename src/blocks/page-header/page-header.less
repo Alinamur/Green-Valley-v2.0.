@@ -20,7 +20,7 @@
 
         @media(min-width: @screen-lg){
             display: flex;
-            flex-basis: 33%;
+            flex-basis: 37%;
             flex-direction: column;
         }
     }
@@ -57,6 +57,7 @@
             flex-basis: 10%;
             padding: 15px 0;
             flex-grow: 1;
+            align-self: center;
         }
 
 }
@@ -66,9 +67,10 @@
     flex-wrap: nowrap;
 
     @media(min-width: @screen-lg){
-            flex-basis: 34%;
-            line-height: 72px;
-            padding-right: 100px;
+            flex-basis: 37%;
+            // line-height: 72px;
+            padding-right: 80px;
+            align-self: center;
         }
 
     &__item{
@@ -92,7 +94,7 @@
     &__list{
         display: flex;
         flex-direction: column;
-        flex-basis: 100%;
+        // flex-basis: 100%;
 
         @media(min-width: @screen-lg){
             flex-direction: row;
@@ -148,8 +150,3 @@
 .menu--open{
     display: flex;
 }
-
-.btn{
-    display: flex;
-    flex-basis: 24%;
-} 
