@@ -46,7 +46,6 @@
         color: @text-color;
     }
     &__main-logo{
-    display: flex;
     flex-basis: 75%;
     flex-grow: 3;
     text-align: center;
@@ -64,7 +63,7 @@
 .main-nav{
 
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 
     @media(min-width: @screen-lg){
             flex-basis: 37%;
@@ -94,6 +93,8 @@
     &__list{
         display: flex;
         flex-direction: column;
+        width: 100%;
+
         // flex-basis: 100%;
 
         @media(min-width: @screen-lg){
@@ -102,7 +103,13 @@
     }
 
     &__link{
+
+        text-decoration: none;
+        color: @darkest;
+        
         &--active{
+
+            text-decoration: none;
             color: @brand-color;
         }
 
@@ -120,22 +127,27 @@
     }
     &__nav{
             display: none;
-            order: 2;
 
         @media(min-width: @screen-lg){
             display: flex;
+            order: 2;
             flex-direction: row;
         }
     }
+    
+}
+
+.phone-menu{
+    display: flex;
+    width: 100%;
+
     &__toggler{
         
-            flex-basis: 25%;
         &-img{
             padding: 10px;
             cursor: pointer;
             width: 30px;
             height: 30px;
-            display: flex;
             flex-grow: 1;
             order: 1;
             }
@@ -146,7 +158,6 @@
 
     }
 }
-
 .menu--open{
-    display: flex;
+    display: block;
 }
