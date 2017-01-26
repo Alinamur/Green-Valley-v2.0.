@@ -1,0 +1,103 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/rest-type-switcher/rest-type-switcher.less';
+
+// @import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.rest-type-switcher{
+
+    &__tab{
+        
+        text-align: center;
+        
+        &-item{
+            font-family: @text-font;
+            font-size: @text-small;
+            line-height: 72px;
+            text-transform: uppercase;
+            padding: 20px;
+            font-weight: 500;
+            color: @middle;
+
+            &--active{
+                color: @brand-color;
+                // display: flex;
+            }
+        }
+        & input[type='radio']{
+            display: none;
+        }
+    }
+    &__type{		
+
+        &-item{
+            background-image: url('../img/promoslide.png');
+            background-repeat: no-repeat;
+            background-size: 230%;
+            //min-height: 160px;
+            background-position: 0 100%;
+            display: none;
+
+            &--active{
+            	display: flex;
+            }
+
+            @media (min-width: @screen-sm) {
+                background-position: 50% 50%;
+                background-size: cover;
+               }   
+        }
+        &-inner{
+            .container();
+        }
+        &-title{
+            font-family: @main-font;
+            font-size: @accent;
+            line-height: 26px;
+
+            text-align: center;
+        }
+        &-text{
+            font-family: @text-font;
+            font-size: @paragraph;
+            line-height: 24px;
+
+            text-align: center;
+        }
+    }
+    &__options{
+        &-inner{
+            .container();
+        }
+        &-item{
+            display: none;
+            background-image: url(../img/bg-options.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 335px;
+
+            &--active{
+            	display: flex;
+            }
+        }
+        &-title{
+            font-family: @main-font;
+            font-size: 26px;
+
+            text-align: center;
+        }
+        &-description{
+            font-family: @text-font;
+            font-size: @paragraph;
+            line-height: 22px;
+
+            text-align: center;
+        }
+        &-list{
+            display: none;
+            @media(min-width: @screen-lg){
+                display: block;
+            }
+        }
+    }
+}

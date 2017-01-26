@@ -11,6 +11,7 @@
 
     &__inner{
         .container();
+        flex: 1;
     }
     
     &__contacts{
@@ -46,10 +47,10 @@
         color: @text-color;
     }
     &__main-logo{
-    flex-basis: 75%;
-    flex-grow: 3;
-    text-align: center;
-    justify-content: center;
+        flex-basis: 75%;
+        flex-grow: 3;
+        text-align: center;
+        justify-content: center;
 
     @media(min-width: @screen-lg){
             flex-basis: 10%;
@@ -63,7 +64,7 @@
 .main-nav{
 
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 
     @media(min-width: @screen-lg){
             flex-basis: 37%;
@@ -93,9 +94,13 @@
     &__list{
         display: flex;
         flex-direction: column;
-        width: 100%;
 
         // flex-basis: 100%;
+
+        @media(max-width: @screen-lg){
+            width: 100%;
+            text-align: center;
+        }
 
         @media(min-width: @screen-lg){
             flex-direction: row;
@@ -139,11 +144,16 @@
 
 .phone-menu{
     display: flex;
-    width: 100%;
+
+    @media(max-width: @screen-lg){
+        width: 100%;
+    }
 
     &__toggler{
         
         &-img{
+            position: absolute;
+            right: 30px;
             padding: 10px;
             cursor: pointer;
             width: 30px;

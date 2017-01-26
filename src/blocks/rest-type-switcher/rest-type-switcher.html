@@ -1,0 +1,129 @@
+<!--DEV
+
+Нужно убрать пробел между @-ами:
+
+@ @include('blocks/rest-type-switcher/rest-type-switcher.html')
+
+-->
+<div class="rest-type-switcher">
+		
+		<div class="rest-type-switcher__tab">
+			<label for="family" class="rest-type-switcher__tab-item  rest-type-switcher__tab-item--active" id="company">Семейный отдых</label>
+			<label for="work" class="rest-type-switcher__tab-item" id="family">Корпоративный</label>
+			<input id="family" type="radio" name="switcher-input" value="family">
+			<input id="work" type="radio" name="switcher-input" value="work">
+		</div>
+
+		<div class="rest-type-switcher__type">
+			<section id="rest-family" class="rest-type-switcher__type-item  rest-type-switcher__type-item--active">
+				<div class="rest-type-switcher__type-inner">
+					<h1 class="rest-type-switcher__type-title">Семейный отдых на берегу Финского залива</h1>
+					<p class="rest-type-switcher__type-text">Green Valley - это современная база отдыха в курортном районе для здорового отдыха всей семьёй.</p>
+				</div>
+			</section>
+			<section id="rest-company" class="rest-type-switcher__type-item">
+				<div class="rest-type-switcher__type-inner">
+					<h1 class="rest-type-switcher__type-title">Корпоративный отдых</h1>
+					<p class="rest-type-switcher__type-text">Green Valley - это современная база отдыхав курортном районе для здорового отдыха всей компанией.</p>
+				</div>
+			</section>
+		</div>	
+		
+		<div class="rest-type-switcher__options">
+			<section id="family-options" class="rest-type-switcher__options-item  rest-type-switcher__options-item--active">
+				<div class="rest-type-switcher__options-inner">
+					<h1 class="rest-type-switcher__options-title">Здоровый отдых</h1>
+					<p class="rest-type-switcher__options-description">Плавайте в бассейне, играйте в волейбол, футбол и другие игры. Устройте семейный пикник с шашлыками или снимите напряжение в бане или спа. Почувствуйте отдых!</p>
+					<ul class="rest-type-switcher__options-list">
+						<li class="rest-type-switcher__option-item">
+							<span class="rest-type-switcher__option-pict" style="background-image: url()"></span>
+							<span class="rest-type-switcher__option-text">Бассейн</span>
+						</li>
+						<li class="rest-type-switcher__option-item">
+							<span class="rest-type-switcher__option-pict" style="background-image: url()"></span>
+							<span class="rest-type-switcher__option-text">Спортивная площадка</span>
+						</li>
+						<li class="rest-type-switcher__option-item">
+							<span class="rest-type-switcher__option-pict" style="background-image: url()"></span>
+							<span class="rest-type-switcher__option-text">Бильярд</span>
+						</li>
+						<li class="rest-type-switcher__option-item">
+							<span class="rest-type-switcher__option-pict" style="background-image: url()"></span>
+							<span class="rest-type-switcher__option-text">Спа</span>
+						</li>
+						<li class="rest-type-switcher__option-item">
+							<span class="rest-type-switcher__option-pict" style="background-image: url()"></span>
+							<span class="rest-type-switcher__option-text">Бани</span>
+						</li>
+						<li class="rest-type-switcher__option-item">
+							<span class="rest-type-switcher__option-pict" style="background-image: url()"></span>
+							<span class="rest-type-switcher__option-text">Анимация</span>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="rest-type-switcher__options-item" id="company-options">
+				<div class="rest-type-switcher__options-inner">
+					<h1 class="rest-type-switcher__options-title">Корпоративный отдых </h1>
+					<p class="rest-type-switcher__options-description">Плавайте в бассейне, играйте в волейбол, футбол и другие игры. Устройте корпоративный пикник с шашлыками или снимите напряжение в бане или спа. Почувствуйте отдых!</p>
+					<ul class="rest-type-switcher__options-list">
+						<li class="rest-type-switcher__option-item">
+							<span class="rest-type-switcher__option-pict" style="background-image: url()"></span>
+							<span class="rest-type-switcher__option-text">Бассейн</span>
+						</li>
+						<li class="rest-type-switcher__option-item">
+							<span class="rest-type-switcher__option-pict" style="background-image: url()"></span>
+							<span class="rest-type-switcher__option-text">Спортивная площадка</span>
+						</li>
+						<li class="rest-type-switcher__option-item">
+							<span class="rest-type-switcher__option-pict" style="background-image: url()"></span>
+							<span class="rest-type-switcher__option-text">Бильярд</span>
+						</li>
+						<li class="rest-type-switcher__option-item">
+							<span class="rest-type-switcher__option-pict" style="background-image: url()"></span>
+							<span class="rest-type-switcher__option-text">Спа</span>
+						</li>
+						<li class="rest-type-switcher__option-item">
+							<span class="rest-type-switcher__option-pict" style="background-image: url()"></span>
+							<span class="rest-type-switcher__option-text">Бани</span>
+						</li>
+						<li class="rest-type-switcher__option-item">
+							<span class="rest-type-switcher__option-pict" style="background-image: url()"></span>
+							<span class="rest-type-switcher__option-text">Анимация</span>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+		</div>
+
+	</div>
+
+<script>
+	var company = document.querySelector('#company');
+	var family = document.querySelector('#family');
+	var companyTypeBlock = document.querySelector('#rest-company');
+	var familyTypeBlock = document.querySelector('#rest-family');
+	var companyOptionBlock = document.querySelector('#company-options');
+	var familyOptionBlock = document.querySelector('#family-options');
+
+	company.addEventListener('click', function(){
+		companyTypeBlock.classList.toggle('rest-type-switcher__type-item--active');
+		familyTypeBlock.classList.toggle('rest-type-switcher__type-item--active');
+		companyOptionBlock.classList.toggle('rest-type-switcher__options-item--active');
+		familyOptionBlock.classList.toggle('rest-type-switcher__options-item--active');
+		company.classList.toggle('rest-type-switcher__tab-item--active');
+		family.classList.toggle('rest-type-switcher__tab-item--active');
+	});
+	family.addEventListener('click', function(){
+		companyTypeBlock.classList.toggle('rest-type-switcher__type-item--active');
+		familyTypeBlock.classList.toggle('rest-type-switcher__type-item--active');
+		companyOptionBlock.classList.toggle('rest-type-switcher__options-item--active');
+		familyOptionBlock.classList.toggle('rest-type-switcher__options-item--active');
+		company.classList.toggle('rest-type-switcher__tab-item--active');
+		family.classList.toggle('rest-type-switcher__tab-item--active');
+	});
+
+
+</script>
