@@ -5,14 +5,18 @@
 
 .rest-type-switcher{
 
+	display: flex;
+	flex-direction: column;
+
     &__tab{
-        
-        text-align: center;
+
+        display: flex;
+        order: 2;
+        justify-content: center;
         
         &-item{
             font-family: @text-font;
             font-size: @text-small;
-            line-height: 72px;
             text-transform: uppercase;
             padding: 20px;
             font-weight: 500;
@@ -29,6 +33,8 @@
     }
     &__type{		
 
+			display: flex;
+			order: 1;
         &-item{
             background-image: url('../img/promoslide.png');
             background-repeat: no-repeat;
@@ -42,12 +48,13 @@
             }
 
             @media (min-width: @screen-sm) {
-                background-position: 50% 50%;
+                // background-position: 50% 50%;
                 background-size: cover;
                }   
         }
         &-inner{
             .container();
+            flex-direction: column;
         }
         &-title{
             font-family: @main-font;
@@ -55,6 +62,19 @@
             line-height: 26px;
 
             text-align: center;
+
+            @media (min-width: @screen-sm){
+                display: inline;
+                background-color: rgba(255, 255, 255, .5);
+                text-align: left;
+                font-family: @main-font;
+                font-weight: 300;
+                font-size: 35px;
+                line-height: 1.17;
+                letter-spacing: 1.8px;
+                max-width: 500px;
+                padding: 10px;
+            }
         }
         &-text{
             font-family: @text-font;
@@ -62,11 +82,25 @@
             line-height: 24px;
 
             text-align: center;
+
+            @media (min-width: @screen-sm){
+                text-align: left;
+                font-size: 18px;
+                line-height: 24px;
+                background-color: rgba(255, 255, 255, .5);
+                display: inline;
+                max-width: 500px;
+            }
         }
     }
     &__options{
+
+    	display: flex;
+    	order: 3;
+
         &-inner{
             .container();
+            flex-direction: column;
         }
         &-item{
             display: none;
@@ -74,7 +108,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            min-height: 335px;
+            min-height: 300px;
 
             &--active{
             	display: flex;
@@ -95,7 +129,7 @@
         }
         &-list{
             display: none;
-            @media(min-width: @screen-lg){
+            @media(min-width: @screen-sm){
                 display: block;
             }
         }

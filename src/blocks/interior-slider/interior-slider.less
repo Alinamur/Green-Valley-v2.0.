@@ -1,0 +1,22 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/interior-slider/interior-slider.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.interior-slider{
+		display: flex;
+	&__inner{
+		.container();
+	}
+	&__list{
+		list-style: none;
+		text-align: center;
+		padding: 0;
+	}
+	&__item{
+		display: none;
+		&--first{
+			display: block;
+		}
+	}
+}
